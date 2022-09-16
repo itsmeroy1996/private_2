@@ -84,10 +84,6 @@ contract WStock3 is ReentrancyGuard, Context, Ownable {
     }
   }
 
-  function addStock(bytes32 _ticker, IERC20 _asset) public onlyAuthorized {
-    stocks[_ticker] = _asset;
-  }
-
   function getReserve()  public view returns(uint256) {
     return reserve;
   }
